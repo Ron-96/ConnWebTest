@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html>
+
 <head>
   <style type="text/css">
     /* Common styles for all screen sizes */
@@ -22,7 +24,38 @@
     .center-text-text1 {
       color: black;
       font-size: 14px;
- 
+    }
+
+    /* Permanent text overlay for mobile */
+    .text-overlay-mobile {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.3);
+      color: whitesmoke;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 34px;
+      font-weight: bold;
+      font-family: Helvetica, sans-serif;
+    }
+
+    /* Hover text overlay for desktop */
+    .text-overlay-desktop {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.3);
+      color: whitesmoke;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 34px;
+      font-weight: bold;
+      font-family: Helvetica, sans-serif;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s; /* Smooth transition on opacity change */
     }
 
     /* For screens with a maximum width of 768px (typical for smartphones) */
@@ -40,35 +73,32 @@
         margin: 10px 0; /* Add margin to separate items */
       }
 
-      .text-overlay {
-        top: auto;
-        left: 0;
-        transform: none;
-        width: 100%; /* Make text overlay full width */
-        margin-top: 10px; /* Add margin to separate items */
+      .text-overlay-desktop {
+        display: none; /* Hide desktop text overlay on mobile */
+      }
+    }
+
+    /* For screens wider than 768px (typical for desktop) */
+    @media (min-width: 769px) {
+      .carousel-item:hover .text-overlay-desktop {
+        opacity: 1; /* Show the text overlay when hovering on desktop */
+      }
+
+      .text-overlay-mobile {
+        display: none; /* Hide mobile text overlay on desktop */
       }
     }
   </style>
 </head>
-<body>
-  <p style="text-align: center;">
-    <a href="https://www.connoisseur.co.za/jblflip6mg_martin-garrix">
-      <img alt="Key-visuals-1920x1080px.jpeg" src="https://harman.widen.net/content/n5sshy7pdj/jpeg/Key-visuals-1920x1080px.jpeg?position=c&amp;quality=80&amp;x.portal_shortcode_generated=aymjcmyb&amp;x.collection_sharename=rhb1epjm&amp;x.app=portals" style="max-width: 100%;" />
-    </a>
-<video autoplay playsinline controls loop muted style="max-width: 100%;">
-  <source src="https://harman.widen.net/content/h4iebtlbus/mp4/30-SECONDS-CLEAN.mov?x.portal_shortcode_generated=aymjcmyb&amp;x.collection_sharename=71xbkvlz&amp;x.app=portals" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-  </p>
 
+<body>
   <p>&nbsp;</p>
 
   <p>&nbsp;</p>
 
   <div class="center-text">
     <p class="center-text-text">SHOP OUR RANGE BELOW</p>
-    <p class="center-text-text1">Exclusive distributor of JBL Lifestyle Audio, Harman Kardon, Marshall, Philips Audio & SOUNDBOKS within ZA.<br></br>
-     Your premium sound journey starts with us.</p>
+    <p class="center-text-text1">Exclusive distributor of JBL Lifestyle Audio, Harman Kardon, Marshall, Philips Audio & SOUNDBOKS within ZA.<br>Your premium sound journey starts with us.</p>
   </div>
 
   <style type="text/css">
@@ -126,56 +156,92 @@
 
   <p>&nbsp;</p>
 
-<div class="carousel-container">
+  <div class="carousel-container">
     <div class="carousel-item">
       <a href="https://www.connoisseur.co.za/jbl/">
-        <img alt="Image 1" src="https://harman.widen.net/content/le1ycptjzt/jpeg/230524_JBL_AW_Shot_11_PB_LivingRoom_2134_x2.jpeg?position=c&quality=80&x.portal_shortcode_generated=aymjcmyb&x.collection_sharename=l5buuoon&x.app=portals" />
-        <div class="text-overlay">JBL</div>
+        <img alt="Image 1"
+          src="https://harman.widen.net/content/le1ycptjzt/jpeg/230524_JBL_AW_Shot_11_PB_LivingRoom_2134_x2.jpeg?position=c&quality=80&x.portal_shortcode_generated=aymjcmyb&x.collection_sharename=l5buuoon&x.app=portals" />
+        <div class="text-overlay-mobile">JBL</div>
+        <div class="text-overlay-desktop">JBL</div>
       </a>
     </div>
-  
+
     <div class="carousel-item">
       <a href="https://www.connoisseur.co.za/harmonkardon/">
-        <img alt="Image 2" src="https://harman.widen.net/content/8yr4rdqenj/jpeg/HK-Go-%2B-Play-3_Lifestyle-Image_Montreux_03.jpg?w=640&keep=c&crop=yes&quality=80&x.portal_shortcode_generated=irfwwvx1&x.collection_sharename=4taxbbnl&x.app=portals" />
-        <div class="text-overlay">HARMAN</div>
+        <img alt="Image 2"
+          src="https://harman.widen.net/content/8yr4rdqenj/jpeg/HK-Go-%2B-Play-3_Lifestyle-Image_Montreux_03.jpg?w=640&keep=c&crop=yes&quality=80&x.portal_shortcode_generated=irfwwvx1&x.collection_sharename=4taxbbnl&x.app=portals" />
+        <div class="text-overlay-mobile">HARMAN</div>
+        <div class="text-overlay-desktop">HARMAN</div>
       </a>
     </div>
   </div>
+
+  <!-- Move the video element here to position it below the carousels -->
+
+
   <div class="carousel-container">
     <div class="carousel-item">
       <a href="https://www.connoisseur.co.za/marshall/">
-        <img alt="Image 3" src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/marshall_middleton-cream_04_kevin-castanheira_%281%29.jpg" />
-        <div class="text-overlay">Marshall</div>
+        <img alt="Image 3"
+          src="C:\Users\Ronald\Downloads\marshall_middleton-cream_04_kevin-castanheira (1).jpg" />
+        <div class="text-overlay-mobile">Marshall</div>
+        <div class="text-overlay-desktop">Marshall</div>
       </a>
     </div>
-  
+
     <div class="carousel-item">
       <a href="https://www.connoisseur.co.za/soundboks/">
-        <img alt="Image 4" src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/_DSF3707_v2.jpg" />
-        <div class="text-overlay">SOUNDBOKS</div>
+        <img alt="Image 4" src="C:\Users\Ronald\Downloads\_DSF3707_v2.jpg" />
+        <div class="text-overlay-mobile">SOUNDBOKS</div>
+        <div class="text-overlay-desktop">SOUNDBOKS</div>
       </a>
     </div>
   </div>
+
   <div class="carousel-container">
     <div class="carousel-item">
-        <a href="https://www.connoisseur.co.za/philips/">
-            <img alt="Image 4" src="https://www.usa.philips.com/c-dam/b2c/en_US/experience/sound-and-vision/headphones/hte/anc-products/h8506_lifestyle.jpg" />
-            <div class="text-overlay">PHILIPS</div>
+      <a href="https://www.connoisseur.co.za/philips/">
+        <img alt="Image 4"
+          src="https://www.usa.philips.com/c-dam/b2c/en_US/experience/sound-and-vision/headphones/hte/anc-products/h8506_lifestyle.jpg" />
+        <div class="text-overlay-mobile">PHILIPS</div>
+        <div class="text-overlay-desktop">PHILIPS</div>
       </a>
     </div>
-  
+
     <div class="carousel-item">
-        <a href="https://www.connoisseur.co.za/one-for-all/">
-            <img alt="Image 3" src="https://www.oneforall.com/sites/default/files/2018-11/Remote_One_Device_For_All_5.jpg" />
-            <div class="text-overlay">One For All</div>
+      <a href="https://www.connoisseur.co.za/one-for-all/">
+        <img alt="Image 3"
+          src="https://www.oneforall.com/sites/default/files/2018-11/Remote_One_Device_For_All_5.jpg" />
+        <div class="text-overlay-mobile">One For All</div>
+        <div class="text-overlay-desktop">One For All</div>
       </a>
     </div>
   </div>
+
   <div class="carousel-container">
     <div class="carousel-item">
-        <a href="https://www.connoisseur.co.za/teac/">
-            <img alt="Image 4" src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/PC-D220.jpg" />
-            <div class="text-overlay">TEAC</div>
+      <a href="https://www.connoisseur.co.za/teac/">
+        <img alt="Image 4" src="D:\Connoisseur\A1 - Images\PC-D220.jpg" />
+        <div class="text-overlay-mobile">TEAC</div>
+        <div class="text-overlay-desktop">TEAC</div>
       </a>
     </div>
-</div>
+  </div>
+
+
+  <p style="text-align: center;">
+    <a href="https://www.connoisseur.co.za/jblflip6mg_martin-garrix">
+      <img alt="Key-visuals-1920x1080px.jpeg"
+        src="https://harman.widen.net/content/n5sshy7pdj/jpeg/Key-visuals-1920x1080px.jpeg?position=c&amp;quality=80&amp;x.portal_shortcode_generated=aymjcmyb&amp;x.collection_sharename=rhb1epjm&amp;x.app=portals"
+        style="max-width: 100%;" />
+    </a>
+    <video autoplay playsinline controls loop muted style="max-width: 100%;">
+      <source
+        src="https://harman.widen.net/content/h4iebtlbus/mp4/30-SECONDS-CLEAN.mov?x.portal_shortcode_generated=aymjcmyb&amp;x.collection_sharename=71xbkvlz&amp;x.app=portals"
+        type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </p>
+</body>
+
+</html>
