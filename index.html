@@ -1,248 +1,209 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <style type="text/css">
-    /* Common styles for all screen sizes */
-    body {
-      overflow-x: hidden; /* Prevent horizontal scrolling */
-      font-family: Helvetica, sans-serif;
-    }
-
-    /* Centered text container */
-    .center-text {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 Days in Paradise | South Africa Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lato', sans-serif; line-height: 1.6; background: #fff; color: #333; }
+    header {
+      background: url('images/image1.jpg') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      color: white;
     }
-
-    /* Styling for the text */
-    .center-text-text {
-      color: black;
-      font-weight: bold;
-      font-size: 28px;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
     }
-
-    .center-text-text1 {
-      color: black;
-      font-size: 14px;
+    header p {
+      font-size: 1.5rem;
+      background: rgba(0,0,0,0.3);
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
     }
-
-    /* Permanent text overlay for mobile */
-    .text-overlay-mobile {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      color: whitesmoke;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 34px;
-      font-weight: bold;
-      font-family: Helvetica, sans-serif;
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
-
-    /* Hover text overlay for desktop */
-    .text-overlay-desktop {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      color: whitesmoke;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 34px;
-      font-weight: bold;
-      font-family: Helvetica, sans-serif;
-      opacity: 1; /* Initially hidden */
-      transition: opacity 0.3s; /* Smooth transition on opacity change */
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
     }
-
-    /* For screens with a maximum width of 768px (typical for smartphones) */
-    @media (max-width: 768px) {
-      .carousel-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        justify-content: center; /* Center items horizontally */
-        margin: 0; /* Reset margin */
-      }
-
-      .carousel-item {
-        flex: 0 0 calc(100% - 20px); /* Adjusted width here */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 10px 0; /* Add margin to separate items */
-      }
-
-      .text-overlay-desktop {
-        display: none; /* Hide desktop text overlay on mobile */
-      }
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #e67e22;
+      margin: 0.5rem auto 0;
     }
-
-    /* For screens wider than 768px (typical for desktop) */
-    @media (min-width: 769px) {
-      .carousel-item:hover .text-overlay-desktop {
-        opacity: 1; /* Show the text overlay when hovering on desktop */
-      }
-
-      .text-overlay-mobile {
-        display: none; /* Hide mobile text overlay on desktop */
-      }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 1.2rem 1rem 0.5rem;
+      color: #2c3e50;
+    }
+    .card p {
+      font-size: 1rem;
+      margin: 0 1rem 1.5rem;
+      color: #555;
     }
   </style>
 </head>
-
 <body>
-  <p>&nbsp;</p>
+  <header>
+    <h1>14 Days in Paradise</h1>
+    <p>From Cape Town to Plettenberg Bay to the Kruger</p>
+  </header>
 
-  <p>&nbsp;</p>
-
-  <div class="center-text">
-    <p class="center-text-text">SHOP OUR RANGE BELOW</p>
-    <p class="center-text-text1">Exclusive distributor of JBL Lifestyle Audio, Harman Kardon, Marshall, Philips Audio & SOUNDBOKS within ZA.<br>Your premium sound journey starts with us.</p>
-  </div>
-
-  <style type="text/css">
-    .carousel-container {
-      display: flex;
-      justify-content: space-around;
-      margin: 0 2cm; /* Adjusted margin here to reduce the left and right margins */
-    }
-
-    .carousel-item {
-      flex: 0 0 calc(49.5%); /* Adjusted width here */
-      height: 500px; /* Adjusted height here */
-      width: 420px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      transition: transform 0.3s;
-      margin: 10px 0; /* Add margin to separate top and bottom images */
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: 100%; /* Make the image fill the container */
-      object-fit: cover; /* Maintain the aspect ratio of the image */
-      border-radius: 10px;
-    }
-
-    .carousel-item:hover {
-      transform: scale(1.05);
-    }
-
-    .text-overlay {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      color: whitesmoke;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 34px;
-      font-weight: bold;
-      font-family: Helvetica, sans-serif;
-      opacity: 0; /* Initially hidden */
-      transition: opacity 0.3s; /* Smooth transition on opacity change */
-    }
-
-    /* Show the text overlay when hovering over the parent container */
-    .carousel-item:hover .text-overlay {
-      opacity: 1;
-    }
-  </style>
-
-  <p>&nbsp;</p>
-
-  <p>&nbsp;</p>
-
-  <div class="carousel-container">
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/jbl/">
-        <img alt="Image 1"
-          src="https://harman.widen.net/content/le1ycptjzt/jpeg/230524_JBL_AW_Shot_11_PB_LivingRoom_2134_x2.jpeg?position=c&quality=80&x.portal_shortcode_generated=aymjcmyb&x.collection_sharename=l5buuoon&x.app=portals" />
-        <div class="text-overlay-mobile">JBL</div>
-        <div class="text-overlay-desktop">JBL</div>
-      </a>
+  <section class="section">
+    <h2>🌇 Cape Town (Days 1–4)</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/image2.jpg" alt="Table Mountain">
+        <h3>Table Mountain</h3>
+        <p>Take the cable car for panoramic views of the city and Atlantic Ocean.</p>
+      </div>
+      <div class="card">
+        <img src="images/image3.jpg" alt="Boulders Beach">
+        <h3>Boulders Beach</h3>
+        <p>Meet the African penguins up close on this scenic beach.</p>
+      </div>
+      <div class="card">
+        <img src="images/image4.jpg" alt="Cape Winelands">
+        <h3>Cape Winelands</h3>
+        <p>Enjoy world-class wine tasting in Stellenbosch or Franschhoek.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/harmonkardon/">
-        <img alt="Image 2"
-          src="https://harman.widen.net/content/8yr4rdqenj/jpeg/HK-Go-%2B-Play-3_Lifestyle-Image_Montreux_03.jpg?w=640&keep=c&crop=yes&quality=80&x.portal_shortcode_generated=irfwwvx1&x.collection_sharename=4taxbbnl&x.app=portals" />
-        <div class="text-overlay-mobile">HARMAN</div>
-        <div class="text-overlay-desktop">HARMAN</div>
-      </a>
+  <section class="section">
+    <h2>🌊 Plettenberg Bay (Days 5–10)</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/image5.jpg" alt="Robberg Reserve">
+        <h3>Robberg Nature Reserve</h3>
+        <p>Hike along dramatic cliffs and see seals lounging in the sun.</p>
+      </div>
+      <div class="card">
+        <img src="images/image6.jpg" alt="Whale Watching">
+        <h3>Whale Watching</h3>
+        <p>Spot whales and dolphins during the migration seasons.</p>
+      </div>
+      <div class="card">
+        <img src="images/image7.jpg" alt="Tsitsikamma">
+        <h3>Tsitsikamma Park</h3>
+        <p>Walk across suspension bridges and marvel at Storms River Mouth.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Move the video element here to position it below the carousels -->
-
-
-  <div class="carousel-container">
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/marshall/">
-        <img alt="Image 3"
-          src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/marshall_middleton-cream_04_kevin-castanheira_%281%29.jpg" />
-        <div class="text-overlay-mobile">Marshall</div>
-        <div class="text-overlay-desktop">Marshall</div>
-      </a>
+  <section class="section">
+    <h2>🦁 Kruger Safari (Days 11–14)</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/image8.jpg" alt="Safari Drive">
+        <h3>Luxury Game Drive</h3>
+        <p>Experience the Big 5 with professional guides and luxury lodges.</p>
+      </div>
+      <div class="card">
+        <img src="images/image9.jpg" alt="Hunting Lodge">
+        <h3>Optional Hunting</h3>
+        <p>Tailored and ethical hunting excursions available upon request.</p>
+      </div>
+      <div class="card">
+        <img src="images/image10.jpg" alt="Bush Dinner">
+        <h3>Bush Dining</h3>
+        <p>Enjoy unforgettable meals under the stars surrounded by nature.</p>
+      </div>
     </div>
-
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/soundboks/">
-        <img alt="Image 4" src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/_DSF3707_v2.jpg" />
-        <div class="text-overlay-mobile">SOUNDBOKS</div>
-        <div class="text-overlay-desktop">SOUNDBOKS</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="carousel-container">
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/philips/">
-        <img alt="Image 4"
-          src="https://www.usa.philips.com/c-dam/b2c/en_US/experience/sound-and-vision/headphones/hte/anc-products/h8506_lifestyle.jpg" />
-        <div class="text-overlay-mobile">PHILIPS</div>
-        <div class="text-overlay-desktop">PHILIPS</div>
-      </a>
-    </div>
-
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/one-for-all/">
-        <img alt="Image 3"
-          src="https://www.oneforall.com/sites/default/files/2018-11/Remote_One_Device_For_All_5.jpg" />
-        <div class="text-overlay-mobile">One For All</div>
-        <div class="text-overlay-desktop">One For All</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="carousel-container">
-    <div class="carousel-item">
-      <a href="https://www.connoisseur.co.za/teac/">
-        <img img alt="Image 3"
-          src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/PC-D220.jpg" />
-        <div class="text-overlay-mobile">TEAC</div>
-        <div class="text-overlay-desktop">TEAC</div>
-      </a>
-    </div>
-  </div>
-
-
-  <p style="text-align: center;">
-    <a href="https://www.connoisseur.co.za/jblflip6mg_martin-garrix">
-      <img alt="Key-visuals-1920x1080px.jpeg"
-        src="https://cdn-d03d5231-5b2e278c.commercebuild.com/427d67657268bc8f3a03cdf6be3a5c95/contents/ckfinder/images/merged_image%402.jpg"
-        style="max-width: 100%;" />
-    </a>
-    <video autoplay playsinline controls loop muted style="max-width: 100%;">
-      <source
-        src="https://harman.widen.net/content/h4iebtlbus/mp4/30-SECONDS-CLEAN.mov?x.portal_shortcode_generated=aymjcmyb&amp;x.collection_sharename=71xbkvlz&amp;x.app=portals"
-        type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </p>
+  </section>
+  <section class="section" style="background:#f9f9f9;">
+    <h2>✨ Personalize Your Trip</h2>
+    <form style="max-width:600px; margin:auto; display:flex; flex-direction:column; gap:1.2rem;">
+      <label>
+        What are your top interests?
+        <select multiple style="width:100%; padding:0.6rem;">
+          <option>Adventure</option>
+          <option>Relaxation</option>
+          <option>Wildlife</option>
+          <option>Food & Wine</option>
+          <option>Culture</option>
+        </select>
+      </label>
+  
+      <label>
+        What is your preferred travel style?
+        <select style="width:100%; padding:0.6rem;">
+          <option>Luxury</option>
+          <option>Mid-range</option>
+          <option>Budget</option>
+        </select>
+      </label>
+  
+      <label>
+        What kind of pace do you prefer?
+        <select style="width:100%; padding:0.6rem;">
+          <option>Leisure</option>
+          <option>Balanced</option>
+          <option>Full Itinerary</option>
+        </select>
+      </label>
+  
+      <label>
+        When are you planning to travel?
+        <input type="text" placeholder="e.g. March 2026" style="width:100%; padding:0.6rem;" />
+      </label>
+  
+      <label>
+        Name & Email (optional for a custom quote):
+        <input type="text" placeholder="Your Name" style="width:100%; padding:0.6rem; margin-bottom:0.6rem;" />
+        <input type="email" placeholder="your@email.com" style="width:100%; padding:0.6rem;" />
+      </label>
+  
+      <button type="submit" style="padding:0.8rem; background:#e67e22; color:white; font-size:1rem; border:none; border-radius:6px; cursor:pointer;">
+        Generate My Trip Plan
+      </button>
+    </form>
+  </section>
+  <footer style="background: #2c3e50; color: white; text-align: center; padding: 2rem 1rem; font-size: 0.9rem;">
+    <p>&copy; 2025 14 Days in Paradise. All rights reserved.</p>
+    <p>Website designed for showcasing the beauty of South Africa's top destinations.</p>
+  </footer>
 </body>
-
 </html>
